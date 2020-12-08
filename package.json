@@ -13,6 +13,7 @@
   "author": "Iain Collins <me@iaincollins.com>",
   "license": "ISC",
   "dependencies": {
+    "@weco/next-plugin-transpile-modules": "^2.2.1",
     "next": "^9.5.4",
     "next-auth": "file:./vendor/next-auth",
     "react": "^16.13.1",
