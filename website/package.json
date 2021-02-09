@@ -16,6 +16,7 @@
     "@weco/next-plugin-transpile-modules": "^2.2.1",
     "next": "^9.5.4",
     "next-auth": "file:../next-auth",
+    "pg-native": "^3.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "sqlite3": "^4.2.0"
