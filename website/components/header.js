@@ -14,20 +14,7 @@ export default function Header () {
         <style>{`.nojs-show { opacity: 1; top: 0; }`}</style>
       </noscript>
       <div className={styles.signedInStatus}>
-        <p className={`nojs-show ${(!session && loading) ? styles.loading : styles.loaded}`}>
-          {!session && <>
-            <span className={styles.notSignedInText}>You are not signed in</span>
-            <a
-                href={`/api/auth/signin`}
-                className={styles.buttonPrimary}
-                onClick={(e) => {
-                  e.preventDefault()
-                  signIn()
-                }}
-              >
-                Sign in
-              </a>
-          </>}
+        <p className={`nojs-show ${(!session) ? styles.loading : styles.loaded}`}>
           {session && <>
             {session.user.image && <span style={{backgroundImage: `url(${session.user.image})` }} className={styles.avatar}/>}
             <span className={styles.signedInText}>
@@ -49,11 +36,11 @@ export default function Header () {
       </div>
       <nav>
         <ul className={styles.navItems}>
-          <li className={styles.navItem}><Link href="/"><a>Home</a></Link></li>
-          <li className={styles.navItem}><Link href="/client"><a>Client</a></Link></li>
+          <li className={styles.navItem}><Link href="/"><a>Hosted Login</a></Link></li>
+          <li className={styles.navItem}><Link href="/saml-login"><a>SAML-only login</a></Link></li>
+          <li className={styles.navItem}><Link href="/osso-react"><a>OssoLogin Component</a></Link></li>
           <li className={styles.navItem}><Link href="/server"><a>Server</a></Link></li>
           <li className={styles.navItem}><Link href="/protected"><a>Protected</a></Link></li>
-          <li className={styles.navItem}><Link href="/api-example"><a>API</a></Link></li>
         </ul>
       </nav>
     </header>

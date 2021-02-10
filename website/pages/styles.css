@@ -20,11 +20,106 @@ hr {
   border: 1px solid #ddd;
 }
 
-iframe {
-  background: #ccc;
-  border: 1px solid #ccc;
-  height: 10rem;
+.login-form {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  border-radius: .5rem;
-  filter: invert(1);
+}
+.login-form label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #8c8c8c;
+}
+.login .button-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.login-form input[type="email"],
+.login-form input[type="password"]{
+  border: 1px solid #d9d9d9;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 8px 6px;
+  margin-bottom: 44px;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000;
+}
+.login-form input[type="email"]::placeholder,
+.login-form input[type="password"]::placeholder {
+  color: #bfbfbf;
+}
+.login-form input[type="email"]:hover,
+.login-form input[type="password"]:hover {
+  box-shadow: 0 0 4px hsla(0, 0%, 85.1%, 0.74);
+}
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+  border: 1px solid #8bc7ff;
+  box-shadow: 0 0 4px rgba(24, 144, 255, 0.5);
+  outline: none;
+}
+.login-form input[type="email"]:valid:not(:focus),
+.login-form input[type="password"]:valid:not(:focus) {
+  border: 1px solid #000;
+  outline: none;
+}
+
+.login-form > div {
+  all: inherit;
+}
+
+
+.login-form button,
+.login-form > div > input[type="submit"] {
+  padding: 5px 16px;
+  border-radius: 2px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  display: inline-block;
+  border: none;
+  margin: 0;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.25s ease-in-out, transform 0.15s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.login input[type="submit"] {
+  background: #595959;
+  color: #fff;
+}
+.login input[type="submit"]:disabled {
+  opacity: 0.25;
+}
+.login input[type="submit"]:focus,
+.login input[type="submit"]:hover:not(:disabled) {
+  background-color: #000;
+}
+.login input[type="submit"]:active {
+  box-shadow: 0 0 4px rgba(24, 144, 255, 0.5);
+}
+.login input[type="submit"]:active,
+.login input[type="submit"]:focus {
+  outline-color: #8bc7ff;
+}
+.login button {
+  background: #fff;
+  border: 1px solid #595959;
+}
+.login button:active,
+.login button:focus,
+.login button:hover {
+  background: #fff;
+  border: 1px solid #000;
+  outline-color: #8bc7ff;
 }
